@@ -158,6 +158,11 @@ const Invoices = () => {
             Seleccionar una nota de crédito
           </h1>
         ) : null}
+        {selectedInvoice && creditNotes.length <= 0 ? (
+          <h1 className="text-xl font-bold my-4">
+            No hay facturas disponibles para asignar
+          </h1>
+        ) : null}
 
         <ul className="text-sm font-medium  bg-white rounded-lg border border-gray-200">
           {pendingInvoices &&
